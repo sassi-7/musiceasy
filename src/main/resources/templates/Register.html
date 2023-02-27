@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org" class="register_html">
+
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+    <title>login</title>
+    <link rel="stylesheet" href="../static/css/othstyle.css" th:href="@{/css/othstyle.css}">
+</head>
+
+<body>
+<div id="signupDiv">
+    <form action="" id="form">
+        <h1 style="text-align: center;color: aliceblue;">注 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</h1>
+        <p>昵 &nbsp;&nbsp;称:<input id="userNname" type="text"></p>
+        <p>手机号:<input id="text" type="password"></p>
+        <p>密 &nbsp;&nbsp;码:<input id="password" type="password"></p>
+
+        <div style="text-align: center;margin-top: 30px;">
+            <input type="submit" class="button register_btn" value="注册">
+            <input type="reset" class="button" value="重置">
+            <a href="index.html" th:href="@{/}"><input type="button" class="button" value="返回"></a>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

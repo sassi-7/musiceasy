@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>后台首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <link rel="stylesheet" th:href="@{https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css}">-->
+<!--    <script th:src="@{https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js}"></script>-->
+<!--    <script th:src="@{https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js}"></script>-->
+<!--    <script th:src="@{https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js}"></script>-->
+    <link rel="stylesheet" type="text/css" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="BackStage.html" th:href="@{/admin}" style="font-family: 腾祥匆匆体简">
+            <img src="../static/img/logo.jpg" th:src="@{/img/logo.jpg}" width="30" height="30" class="d-inline-block align-top" alt="">
+            乐易后台
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="nav nav-pills nav-fill">
+                <a class="nav-item nav-link active backs_nav_a2" href="BackStage.html" th:href="@{/admin}">管理员</a>
+                <a class="nav-item nav-link  backs_nav_a2" href="CustInfo.html" th:href="@{/CustInfo}">客户信息</a>
+                <a class="nav-item nav-link  backs_nav_a2" href="GoodsInfo.html" th:href="@{/GoodsInfo}">商品信息</a>
+                <a class="nav-item nav-link  backs_nav_a2" href="OrderInfo.html" th:href="@{/OrderInfo}">订单信息</a>
+                <a class="btn btn-outline-success  backs_nav_a2" href="index.html" th:href="@{/}">前往前台</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-sm-7 backs_admin">
+        <h1 style="margin-left: 175px">管理员信息展示</h1>
+        <table class="table table-dark table-hover">
+            <tbody>
+            <tr>
+                <td>账号（工牌号）：</td>
+                <td th:text="${adminInfo.admin_account}"></td>
+            </tr>
+            <tr>
+                <td>权&nbsp;&nbsp;&nbsp;限&nbsp;&nbsp;&nbsp;级&nbsp;&nbsp;&nbsp;别&nbsp;&nbsp;：</td>
+                <td th:text="${adminInfo.permission_level}"></td>
+            </tr>
+            <tr>
+                <td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                <td th:text="${adminInfo.admin_name}"></td>
+            </tr>
+            <tr>
+                <td>出&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;期&nbsp;&nbsp;：</td>
+                <td th:text="${adminInfo.birth_date}"></td>
+            </tr>
+            <tr>
+                <td>家&nbsp;&nbsp;&nbsp;庭&nbsp;&nbsp;&nbsp;住&nbsp;&nbsp;&nbsp;址&nbsp;&nbsp;：</td>
+                <td th:text="${adminInfo.admin_address}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+            <a href="AdminInfoEdit.html" th:href="@{/AdminMsgEdit(admin_account=(${adminInfo.admin_account}))}" style="text-decoration: none;margin-left: 520px" class="btn btn-danger">信息修改</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

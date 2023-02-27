@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>信息修改</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+</head>
+    <body  class="MsgEdit_body">
+     <div class="MsgEdit_div">
+         <a href="BackStage.html" th:href="@{/admin}" class="btn btn-info">返回</a>
+     </div>
+     <div class="container">
+        <div class="row">
+        <div class="col-sm-6">
+        <div><h1 class="MsgEdit_h1">信息修改</h1></div>
+        <form method="post" th:action="@{/admin_edit}" th:object="${adminInfo}" class="jumbotron">
+            <div class="form-group">
+                <label>账号（工牌号）：</label>
+                <input type="text" class="form-control" name="admin_account" id="admin_account"  th:value="*{admin_account}" readonly>
+            </div>
+            <div class="form-group">
+                <label>权限级别：</label>
+                <input type="text" class="form-control" name="permission_level" id="permission_level" th:value="*{permission_level}" required>
+            </div>
+            <div class="form-group">
+                <label>姓名：</label>
+                <input type="text" class="form-control" name="admin_name" id="admin_name" th:value="*{admin_name}" required>
+            </div>
+            <div class="form-group">
+                <label>出生日期：</label>
+                <input type="date" class="form-control" name="birth_date" id="birth_date" th:value="*{birth_date}" required>
+            </div>
+            <div class="form-group">
+                <label>家庭住址：</label>
+                <input type="text" class="form-control" name="admin_address" id="admin_address" th:value="*{admin_address}" required>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">提交</button>
+                <button type="reset" class="btn btn-secondary">清空</button>
+            </div>
+        </form>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

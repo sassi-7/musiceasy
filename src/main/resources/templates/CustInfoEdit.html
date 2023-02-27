@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>信息修改</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+</head>
+<body  class="CustInfoEdit_body">
+<div class="CustInfoEdit_div">
+    <a href="CustInfo.html" th:href="@{/CustInfo}" class="btn btn-info">返回</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div><h1 class="CustInfoEdit_h1">信息修改</h1></div>
+            <form method="post" th:action="@{/cust_edit}" th:object="${custInfo}" class="jumbotron">
+                <div class="form-group">
+                    <label>客户账号：</label>
+                    <input type="text" class="form-control" name="cust_account" id="cust_account" th:value="*{cust_account}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>昵称：</label>
+                    <input type="text" class="form-control" name="cust_name" id="cust_name" th:value="*{cust_name}" required>
+                </div>
+                <div class="form-group">
+                    <label>密码：</label>
+                    <input type="text" class="form-control" name="cust_passwd" id="cust_passwd" th:value="*{cust_passwd}" required>
+                </div>
+                <div class="form-group">
+                    <label>收货地址：</label>
+                    <input type="text" class="form-control" name="cust_address" id="cust_address" th:value="*{cust_address}" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-secondary">清空</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

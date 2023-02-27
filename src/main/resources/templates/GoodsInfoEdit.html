@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>信息修改</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/mystyle.css" th:href="@{/css/mystyle.css}">
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+</head>
+<body  class="GoodsInfoEdit_body">
+<div class="GoodsInfoEdit_div">
+    <a href="GoodsInfo.html" th:href="@{/GoodsInfo}" class="btn btn-info">返回</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div><h1 class="GoodsInfoEdit_h1">信息修改</h1></div>
+            <form method="post" th:action="@{/goods_edit}" th:object="${goodsInfo}" class="jumbotron">
+                <div class="form-group">
+                    <label>商品编号：</label>
+                    <input type="text" class="form-control" name="goods_id" id="goods_id" th:value="*{goods_id}" readonly>
+                </div>
+                <div class="form-group">
+                    <label>展示编号：</label>
+                    <input type="text" class="form-control" name="display_id" id="display_id" th:value="*{display_id}" required>
+                </div>
+                <div class="form-group">
+                    <label>商品名称：</label>
+                    <input type="text" class="form-control" name="goods_name" id="goods_name" th:value="*{goods_name}" required>
+                </div>
+                <div class="form-group">
+                    <label>出售情况：</label>
+                    <input type="text" class="form-control" name="sale_status" id="sale_status" th:value="*{sale_status}" >
+                </div>
+                <div class="form-group">
+                    <label>进货日期：</label>
+                    <input type="date" class="form-control" name="indate" id="indate" th:value="*{indate}" required>
+                </div>
+                <div class="form-group">
+                    <label>进货厂家：</label>
+                    <input type="text" class="form-control" name="factory" id="factory" th:value="*{factory}" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="reset" class="btn btn-secondary">清空</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

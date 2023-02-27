@@ -1,0 +1,96 @@
+html body {
+    margin: 0;            /* 先把margin、padding、border设为0，免得浏览器会有一些默认值*/
+    padding: 0;
+    border: 0;
+    background-color: #f0eef5;
+}
+
+
+
+
+
+.index_nav_a1{
+    margin-left: 50px;
+}
+.index_nav_a2{
+    margin-left: 60px;
+}
+.index_nav_a3{
+     margin-left: 460px;
+ }
+.index_nav_a4{
+    margin-left: 10px;
+}
+.index_bottom{
+    color: #e8e8e8;
+    height: auto;
+    background-color: #4e555b;
+    text-align: center;
+}
+.index_instru_d1{
+    float: left;
+}
+
+
+
+
+.backs_nav_a2{
+    font-family: 腾祥爱情体简;
+    color: #fbfcfc;
+    margin-left: 120px;
+}
+.backs_admin{
+    margin-left: 22%;
+    margin-top: 10%;
+}
+
+
+
+
+
+/*MsgEdit页面样式*/
+/*以下样式按顺序分布*/
+.MsgEdit_body{
+     background-image: url("../img/cal1.jpg");    /*此处不用进入static，url与src不同*/
+     background-size: cover;
+ }
+.MsgEdit_div{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.MsgEdit_h1{
+    color: #fbfcfc;
+    text-align: center;
+}
+
+/*CustInfoEdit页面样式*/
+/*以下样式按顺序分布*/
+.CustInfoEdit_body{
+    background-image: url("../img/cal2.png");
+    background-size: cover;
+}
+.CustInfoEdit_div{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.CustInfoEdit_h1{
+    color: #4e555b;
+    text-align: center;
+}
+
+/*GoodsInfoEdit页面样式*/
+/*以下样式按顺序分布*/
+.GoodsInfoEdit_body{
+    background-image: url("../img/cal3.png");
+    background-size: cover;
+}
+.GoodsInfoEdit_div{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.GoodsInfoEdit_h1{
+    color: #4e555b;
+    text-align: center;
+}
+
+
